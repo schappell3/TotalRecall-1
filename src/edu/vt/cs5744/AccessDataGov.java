@@ -21,6 +21,8 @@ public class AccessDataGov extends AsyncTask<Void, Void, Recalls>
             
             Recalls response = new Gson().fromJson(in.readLine(), Recalls.class);
             
+            in.close();
+            
             return response;
         }
         catch(Exception e)
