@@ -5,7 +5,7 @@ import android.util.Log;
 
 public class RecallReceiver 
 {
-	private ReturnApi mApi;
+	private Recalls mApi;
 	private static RecallReceiver sRecallReceiver;
     private Context mAppContext;
 
@@ -32,38 +32,14 @@ public class RecallReceiver
         return sRecallReceiver;
     }
     
-    public ReturnApi getReturnApi() 
+    public Recalls getReturnApi() 
     {
         return mApi;
     }
     
-    public ResultsCpsc getResultsCpsc(String number) 
+    public Results getResults(String number) 
     {
-        for (ResultsCpsc a : mApi.getCpsc().getSuccess().getResults()) 
-        {
-            if (a.getRecallNumber().equals(number))
-            {
-            	return a;
-            }      
-        }
-        return null;
-    }
-    
-    public ResultsNhtsa getResultsNhtsa(String number) 
-    {
-        for (ResultsNhtsa a : mApi.getNhtsa().getSuccess().getResults()) 
-        {
-            if (a.getRecallNumber().equals(number))
-            {
-            	return a;
-            }      
-        }
-        return null;
-    }
-    
-    public ResultsFdaUsda getResultsFdaUsda(String number) 
-    {
-        for (ResultsFdaUsda a : mApi.getFdausda().getSuccess().getResults()) 
+        for (Results a : mApi.getSuccess().getResults()) 
         {
             if (a.getRecallNumber().equals(number))
             {

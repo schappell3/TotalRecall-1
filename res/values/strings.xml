@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Total Recall</string>
-  	<string name="recall_title_cpsc">CPSC</string>
-  	<string name="recall_title_nhtsa">NHTSA</string>
-  	<string name="recall_title_fdausda">FDA and USDA</string>
+  	<string name="recall_title">US Recalls</string>
 </resources>

@@ -1,6 +1,6 @@
 package edu.vt.cs5744;
 
-public class RecordsNhtsa 
+public class Records 
 {
 	private String component_description;
 	private String make;
@@ -11,20 +11,6 @@ public class RecordsNhtsa
 	private String recalled_component_id;
 	private String year;
 	
-	RecordsNhtsa(String component_description, String make, String manufacturer, 
-			String manufacturing_begin_date, String manufacturing_end_date, 
-			String model, String recalled_component_id, String year)
-	{
-		this.component_description = component_description;
-		this.make = make;
-		this.manufacturer = manufacturer;
-		this.manufacturing_begin_date = manufacturing_begin_date;
-		this.manufacturing_end_date = manufacturing_end_date;
-		this.model = model;
-		this.recalled_component_id = recalled_component_id;
-		this.year = year;
-	}
-	
 	public String toString() 
 	{
 		return new StringBuffer("Component Description: ").append(this.component_description)
@@ -34,5 +20,6 @@ public class RecordsNhtsa
 				.append(this.manufacturing_end_date).append("\nModel: ").append(this.model)
 				.append("\nRecalled Component ID: ").append(this.recalled_component_id)
 				.append("\nYear: ").append(this.year).toString();
-    }
+    
+	}
 }

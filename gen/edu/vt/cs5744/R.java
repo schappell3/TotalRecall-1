@@ -36,11 +36,10 @@ public final class R {
         public static final int recall_descriptions=0x7f050008;
         public static final int recall_hazards=0x7f05000a;
         public static final int recall_initiator=0x7f050014;
-        public static final int recall_list_item_componentDescriptionTextView=0x7f05001f;
-        public static final int recall_list_item_dateTextView=0x7f05001c;
-        public static final int recall_list_item_descriptionTextView=0x7f05001d;
-        public static final int recall_list_item_idTextView=0x7f05001b;
-        public static final int recall_list_item_summaryTextView=0x7f05001e;
+        public static final int recall_list_item_dateTextView=0x7f05001d;
+        public static final int recall_list_item_descriptionTextView=0x7f05001e;
+        public static final int recall_list_item_idTextView=0x7f05001c;
+        public static final int recall_list_item_organizationTextView=0x7f05001b;
         public static final int recall_manufacturer=0x7f050011;
         public static final int recall_manufacturer_campaign_number=0x7f05000f;
         public static final int recall_manufacturers=0x7f050006;
@@ -62,15 +61,11 @@ public final class R {
         public static final int fragment_recall_cpsc=0x7f030001;
         public static final int fragment_recall_fdausda=0x7f030002;
         public static final int fragment_recall_nhtsa=0x7f030003;
-        public static final int list_item_recall_cpsc=0x7f030004;
-        public static final int list_item_recall_fdausda=0x7f030005;
-        public static final int list_item_recall_nhtsa=0x7f030006;
+        public static final int list_item_recall=0x7f030004;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
-        public static final int recall_title_cpsc=0x7f060001;
-        public static final int recall_title_fdausda=0x7f060003;
-        public static final int recall_title_nhtsa=0x7f060002;
+        public static final int recall_title=0x7f060001;
     }
     public static final class style {
         /** 

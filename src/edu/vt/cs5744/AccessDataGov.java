@@ -9,49 +9,19 @@ import com.google.gson.Gson;
 import android.os.AsyncTask;
 import android.util.Log;
 
-public class AccessDataGov extends AsyncTask<Void, Void, ReturnApi>
+public class AccessDataGov extends AsyncTask<Void, Void, Recalls>
 {
-	protected ReturnApi doInBackground(Void...voids)
+	protected Recalls doInBackground(Void...voids)
     {
         try
         {
-        	String url = "http://api.usa.gov/recalls/search.json?sort=date&organization=cpsc";
+        	String url = "http://api.usa.gov/recalls/search.json?sort=date&per_page=50";
             URL dataGov = new URL(url);
             BufferedReader in = new BufferedReader(new InputStreamReader(dataGov.openStream())); 
             
-            ReturnApi rc;
+            Recalls response = new Gson().fromJson(in.readLine(), Recalls.class);
             
-            if(url.contains("organization=cpsc"))
-            {
-            	RecallsCpsc response = new Gson().fromJson(in.readLine(), RecallsCpsc.class);
-            	rc = new ReturnApi("CPSC");
-            	rc.setCpsc(response);
-            	in.close();  
-                
-                return rc; 
-            }
-            else if(url.contains("organization=nhtsa"))
-            {
-            	RecallsNhtsa response = new Gson().fromJson(in.readLine(), RecallsNhtsa.class);
-            	rc = new ReturnApi("NHTSA");
-            	rc.setNhtsa(response);
-            	in.close();  
-                
-                return rc;  
-            }
-            else if(url.contains("organization=fda+usda"))
-            {
-            	RecallsFdaUsda response = new Gson().fromJson(in.readLine(), RecallsFdaUsda.class);
-            	rc = new ReturnApi("FDAUSDA");
-            	rc.setFdausda(response);
-            	in.close();  
-                
-                return rc; 
-            }
-            else
-            {
-            	throw new Exception();
-            }  
+            return response;
         }
         catch(Exception e)
         {
